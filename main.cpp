@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) Coffee Machine
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of coffee types available
+    2) water tank capacity in liters 
+    3) amount of coffee beans in grams
+    4) current temperature in degrees Celsius
+    5) days before servicing
 3 things it can do:
-    1)
-    2)
-    3)
+    1) brew a cup of coffee
+    2) refill water
+    3) select coffee type
 
-Thing 2)
+Thing 2) Smart Thermostat
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) current room temperature
+    2) desired temperature
+    3) energy consumption in kilowatt-hours
+    4) mode 'Heat', 'Cool, 'Auto'
+    5) is wifi connected
 3 things it can do:
-    1)
-    2)
-    3)
+    1) adjust room temperature
+    2) switch between modes
+    3) send report of energy usage
 
-Thing 3)
+Thing 3) Library Account
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of books currently checked out
+    2) total number of books allowed to borrow
+    3) fine amount due in dollars 
+    4) account status 'active', 'suspended'
+    5) number of days until book return due
 3 things it can do:
-    1)
-    2)
-    3)
+    1) check out books
+    2) pay fines
+    3) renew borrowed books
 
-Thing 4)
+Thing 4) Exercise Bike
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) current speed in kilometers per hour
+    2) total distance covered in kilometers
+    3) resistance level
+    4) heart rate of the user
+    5) number of calories burned
 3 things it can do:
-    1)
-    2)
-    3)
+    1) increase or decrease resistance
+    2) track distance and speed
+    3) monitor user's heart rate
 */
 
 /*
