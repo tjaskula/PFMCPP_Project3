@@ -546,6 +546,41 @@ example:
         Brightness (double)
         width in cm (int)
         height in cm (int)
+
+Cockpit:
+    Number of control panels (int)
+    Type of autopilot system (std::string)
+    Visibility through windshield (bool)
+    Number of seats (int)
+    Amount of emergency equipment (int)
+
+Engine:
+    Thrust power in kilonewtons (float)
+    Fuel consumption rate per hour (float)
+    Type of engine (std::string)
+    Operating temperature range (float)
+    Current RPM (int)
+
+Wings:
+    Wingspan in meters (float)
+    Fuel capacity in liters (float)
+    Number of flaps (int)
+    Material type (std::string)
+    Presence of winglets (bool)
+
+Landing Gear:
+    Number of wheels (int)
+    Maximum weight capacity (float)
+    Retractable or fixed (bool)
+    Brake effectiveness (int)
+    Shock absorption level (float)
+
+Cabin:
+    Number of passenger seats (int)
+    Available legroom in inches (float)
+    Number of restrooms (int)
+    Onboard entertainment options (std::string)
+    Air filtration system quality (int)
 */
 
 /*
