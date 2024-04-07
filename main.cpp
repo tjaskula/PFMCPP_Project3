@@ -462,65 +462,65 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) Cockpit
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Number of control panels
+    2) Type of autopilot system
+    3) Visibility through windshield
+    4) Number of seats
+    5) Amount of emergency equipment
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Navigate the airplane
+    2) Communicate with air traffic control
+    3) Monitor airplane systems
 
-Thing 6)
+Thing 6) Engine
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Thrust power in kilonewtons
+    2) Fuel consumption rate per hour
+    3) Type of engine
+    4) Operating temperature range
+    5) Current RPM
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Propel the airplane
+    2) Adjust thrust levels
+    3) Start
 
-Thing 7)
+Thing 7) Wings
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Wingspan in meters
+    2) Fuel capacity in liters
+    3) Number of flaps
+    4) Material type
+    5) Elasticity in percent
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Provide lift
+    2) Control wing tilt
+    3) Adjust for maneuvering and stability
 
-Thing 8)
+Thing 8) Landing Gear
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Number of wheels
+    2) Maximum weight capacity
+    3) Retractable or fixed
+    4) Brake effectiveness
+    5) Shock absorption level
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Deploy
+    2) Retract
+    3) Break
 
-Thing 9)
+Thing 9) Cabin
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Number of passenger seats
+    2) Available legroom in inches
+    3) Number of restrooms
+    4) Onboard entertainment options
+    5) Air filtration system quality
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Adjust temperature
+    2) Control Pressure
+    3) Monitor air quality
  */
 
 /*
