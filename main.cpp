@@ -318,6 +318,34 @@ example:
         Brightness (double)
         area in cm2 (int)
         brand (std::string)
+
+Coffee Machine:
+    number of coffee types available (int)
+    water tank capacity in liters (float)
+    amount of coffee beans in grams (int)
+    current temperature in degrees Celsius (float)
+    days before servicing (int)
+
+Smart Thermostat:
+    current room temperature (float)
+    desired temperature (float)
+    energy consumption in kilowatt-hours (float)
+    mode 'Heat', 'Cool, 'Auto' (std::string)
+    is wifi connected (bool)
+
+Library Account:
+    number of books currently checked out (int)
+    total number of books allowed to borrow (int)
+    fine amount due in dollars (double)
+    account status 'active', 'suspended' (std::string)
+    number of days until book return due (int)
+
+Exercise Bike:
+    current speed in kilometers per hour (float)
+    total distance covered in kilometers (float)
+    resistance level (int)
+    heart rate of the user (int)
+    number of calories burned (double)
 */
 
 /*
