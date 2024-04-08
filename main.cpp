@@ -1422,6 +1422,63 @@ struct CarWash
     //detail the car interior
     void detailInterior();
 };
+
+struct Cockpit
+{
+    int numberOfControlPanels = 4;
+    std::string autopilotSystemType = "Advanced";
+    bool visibilityThroughWindshield = true;
+    int numberOfSeats = 2;
+    int amountOfEmergencyEquipment = 5;
+
+    struct NavigationSystem
+    {
+        // 5 properties:
+        float gpsLatitude = 0.0f;
+        float gpsLongitude = 0.0f;
+        bool hasAutoPilotCapability = true;
+        std::string currentFlightPlan = "N/A";
+        float altitude = 10000.0f;
+
+        // 3 things it can do:
+        void updateFlightPlan(const std::string& newFlightPlan);
+        void changeAltitude(float newAltitude);
+        void activateAutoPilot();
+    };
+
+    void navigateAirplane();
+    void communicateWithATC(const std::string& message);
+    void monitorSystems();
+};
+
+struct Engine
+{
+    float thrustPowerKiloNewtons = 100.0f;
+    float fuelConsumptionPerHour = 50.0f;
+    std::string engineType = "Jet";
+    float operatingTemperatureRange = 150.0f;
+    int currentRPM = 2000;
+
+    struct ThrustControl
+    {
+        // 5 properties:
+        float maxThrustKiloNewtons = 120.0f;
+        float currentThrustKiloNewtons = 100.0f;
+        bool isAfterburnerActive = false;
+        int thrustEfficiencyPercentage = 90; // in percent
+        float fuelFlowRate = 0.0f; // fuel flow rate per hour
+
+        // 3 things it can do:
+        void increaseThrust(float amount);
+        void activateAfterburner();
+        void decreaseThrust(float amount);
+    };
+
+    void propelAirplane();
+    void adjustThrust(float newThrustLevel);
+    void startEngine();
+};
+
 /*
 =================
 Part 1e - Step 10: Commit
