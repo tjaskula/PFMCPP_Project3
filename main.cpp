@@ -708,6 +708,146 @@ struct CarWash
     //    - detail the car interior
 };
 
+struct CoffeeMachine
+{
+    // 5 properties:
+    //     - number of coffee types available (int)
+    //     - water tank capacity in liters (float)
+    //     - amount of coffee beans in grams (int)
+    //     - current temperature in degrees Celsius (float)
+    //     - days before servicing (int)
+    // 3 things it can do:
+    //     - brew a cup of coffee
+    //     - refill water
+    //     - select coffee type
+};
+
+struct SmartThermostat
+{
+    // 5 properties:
+    //     - current room temperature (float)
+    //     - desired temperature (float)
+    //     - energy consumption in kilowatt-hours (float)
+    //     - mode 'Heat', 'Cool, 'Auto' (std::string)
+    //     - is wifi connected (bool)
+    // 3 things it can do:
+    //     - adjust room temperature
+    //     - switch between modes
+    //     - send report of energy usage
+};
+
+struct LibraryAccount
+{
+    // 5 properties:
+    //     - number of books currently checked out (int)
+    //     - total number of books allowed to borrow (int)
+    //     - fine amount due in dollars (double)
+    //     - account status 'active', 'suspended' (std::string)
+    //     - number of days until book return due (int)
+    // 3 things it can do:
+    //     - check out books
+    //     - pay fines
+    //     - renew borrowed books
+};
+
+struct ExerciseBike
+{
+    // 5 properties:
+    //     - current speed in kilometers per hour (float)
+    //     - total distance covered in kilometers (float)
+    //     - resistance level (int)
+    //     - heart rate of the user (int)
+    //     - number of calories burned (double)
+    // 3 things it can do:
+    //     - increase or decrease resistance
+    //     - track distance and speed
+    //     - monitor user's heart rate
+};
+
+struct Cockpit
+{
+    // 5 properties:
+    //     - Number of control panels (int)
+    //     - Type of autopilot system (std::string)
+    //     - Visibility through windshield (bool)
+    //     - Number of seats (int)
+    //     - Amount of emergency equipment (int)
+    // 3 things it can do:
+    //     - Navigate the airplane
+    //     - Communicate with air traffic control
+    //     - Monitor airplane systems
+};
+
+struct Engine
+{
+    // 5 properties:
+    //     - Thrust power in kilonewtons (float)
+    //     - Fuel consumption rate per hour (float)
+    //     - Type of engine (std::string)
+    //     - Operating temperature range (float)
+    //     - Current RPM (int)
+    // 3 things it can do:
+    //     - Propel the airplane
+    //     - Adjust thrust levels
+    //     - Start
+};
+
+struct Wings
+{
+    // 5 properties:
+    //     - Wingspan in meters (float)
+    //     - Fuel capacity in liters (float)
+    //     - Number of flaps (int)
+    //     - Material type (std::string)
+    //     - Elasticity in percent (double)
+    // 3 things it can do:
+    //     - Provide lift
+    //     - Control wing tilt
+    //     - Adjust for maneuvering and stability
+};
+
+struct LandingGear
+{
+    // 5 properties:
+    //     - Number of wheels (int)
+    //     - Maximum weight capacity (float)
+    //     - Retractable or fixed (bool)
+    //     - Brake effectiveness (int)
+    //     - Shock absorption level (float)
+    // 3 things it can do:
+    //     - Deploy
+    //     - Retract
+    //     - Break
+};
+
+struct Cabin
+{
+    // 5 properties:
+    //     - Number of passenger seats (int)
+    //     - Available legroom in inches (float)
+    //     - Number of restrooms (int)
+    //     - Onboard entertainment options (std::string)
+    //     - Air filtration system quality (int)
+    // 3 things it can do:
+    //     - Adjust temperature
+    //     - Control Pressure
+    //     - Monitor air quality
+};
+
+struct Airplane
+{
+    // 5 properties:
+    //     - Cockpit
+    //     - Engines
+    //     - Wings
+    //     - Landing Gear
+    //     - Cabin
+    // 3 things it can do:
+    //     - Take off
+    //     - Land
+    //     - Navigate
+};
+
 /*
 =================
 Part 1e - Step 4: Commit
