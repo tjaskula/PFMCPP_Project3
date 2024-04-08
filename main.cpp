@@ -196,53 +196,7 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1) Coffee Machine
-5 properties:
-    1) number of coffee types available
-    2) water tank capacity in liters 
-    3) amount of coffee beans in grams
-    4) current temperature in degrees Celsius
-    5) days before servicing
-3 things it can do:
-    1) brew a cup of coffee
-    2) refill water
-    3) select coffee type
-
-Thing 2) Smart Thermostat
-5 properties:
-    1) current room temperature
-    2) desired temperature
-    3) energy consumption in kilowatt-hours
-    4) mode 'Heat', 'Cool, 'Auto'
-    5) is wifi connected
-3 things it can do:
-    1) adjust room temperature
-    2) switch between modes
-    3) send report of energy usage
-
-Thing 3) Library Account
-5 properties:
-    1) number of books currently checked out
-    2) total number of books allowed to borrow
-    3) fine amount due in dollars 
-    4) account status 'active', 'suspended'
-    5) number of days until book return due
-3 things it can do:
-    1) check out books
-    2) pay fines
-    3) renew borrowed books
-
-Thing 4) Exercise Bike
-5 properties:
-    1) current speed in kilometers per hour
-    2) total distance covered in kilometers
-    3) resistance level
-    4) heart rate of the user
-    5) number of calories burned
-3 things it can do:
-    1) increase or decrease resistance
-    2) track distance and speed
-    3) monitor user's heart rate
+MOVED bellow to part 1d
 */
 
 /*
@@ -319,33 +273,7 @@ example:
         area in cm2 (int)
         brand (std::string)
 
-Coffee Machine:
-    number of coffee types available (int)
-    water tank capacity in liters (float)
-    amount of coffee beans in grams (int)
-    current temperature in degrees Celsius (float)
-    days before servicing (int)
-
-Smart Thermostat:
-    current room temperature (float)
-    desired temperature (float)
-    energy consumption in kilowatt-hours (float)
-    mode 'Heat', 'Cool, 'Auto' (std::string)
-    is wifi connected (bool)
-
-Library Account:
-    number of books currently checked out (int)
-    total number of books allowed to borrow (int)
-    fine amount due in dollars (double)
-    account status 'active', 'suspended' (std::string)
-    number of days until book return due (int)
-
-Exercise Bike:
-    current speed in kilometers per hour (float)
-    total distance covered in kilometers (float)
-    resistance level (int)
-    heart rate of the user (int)
-    number of calories burned (double)
+MOVED bellow to part 1d
 */
 
 /*
@@ -365,17 +293,7 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10) Airplane
-5 properties:
-    1) Cockpit
-    2) Engines
-    3) Wings
-    4) Landing Gear
-    5) Cabin
-3 things it can do:
-    1) Take off
-    2) Land
-    3) Navigate
+MOVED bellow to Part 1d
  */
 
  /*
@@ -462,65 +380,7 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5) Cockpit
-5 properties:
-    1) Number of control panels
-    2) Type of autopilot system
-    3) Visibility through windshield
-    4) Number of seats
-    5) Amount of emergency equipment
-3 things it can do:
-    1) Navigate the airplane
-    2) Communicate with air traffic control
-    3) Monitor airplane systems
-
-Thing 6) Engine
-5 properties:
-    1) Thrust power in kilonewtons
-    2) Fuel consumption rate per hour
-    3) Type of engine
-    4) Operating temperature range
-    5) Current RPM
-3 things it can do:
-    1) Propel the airplane
-    2) Adjust thrust levels
-    3) Start
-
-Thing 7) Wings
-5 properties:
-    1) Wingspan in meters
-    2) Fuel capacity in liters
-    3) Number of flaps
-    4) Material type
-    5) Elasticity in percent
-3 things it can do:
-    1) Provide lift
-    2) Control wing tilt
-    3) Adjust for maneuvering and stability
-
-Thing 8) Landing Gear
-5 properties:
-    1) Number of wheels
-    2) Maximum weight capacity
-    3) Retractable or fixed
-    4) Brake effectiveness
-    5) Shock absorption level
-3 things it can do:
-    1) Deploy
-    2) Retract
-    3) Break
-
-Thing 9) Cabin
-5 properties:
-    1) Number of passenger seats
-    2) Available legroom in inches
-    3) Number of restrooms
-    4) Onboard entertainment options
-    5) Air filtration system quality
-3 things it can do:
-    1) Adjust temperature
-    2) Control Pressure
-    3) Monitor air quality
+MOVED bellow to Part 1d
  */
 
 /*
@@ -547,40 +407,7 @@ example:
         width in cm (int)
         height in cm (int)
 
-Cockpit:
-    Number of control panels (int)
-    Type of autopilot system (std::string)
-    Visibility through windshield (bool)
-    Number of seats (int)
-    Amount of emergency equipment (int)
-
-Engine:
-    Thrust power in kilonewtons (float)
-    Fuel consumption rate per hour (float)
-    Type of engine (std::string)
-    Operating temperature range (float)
-    Current RPM (int)
-
-Wings:
-    Wingspan in meters (float)
-    Fuel capacity in liters (float)
-    Number of flaps (int)
-    Material type (std::string)
-    Presence of winglets (bool)
-
-Landing Gear:
-    Number of wheels (int)
-    Maximum weight capacity (float)
-    Retractable or fixed (bool)
-    Brake effectiveness (int)
-    Shock absorption level (float)
-
-Cabin:
-    Number of passenger seats (int)
-    Available legroom in inches (float)
-    Number of restrooms (int)
-    Onboard entertainment options (std::string)
-    Air filtration system quality (int)
+MOVED below to Part 1d
 */
 
 /*
@@ -606,11 +433,127 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I do not want to see 2 copies of your Plain-English UDTs.  
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
+
+Thing 1) Coffee Machine
+5 properties:
+    1) number of coffee types available (int)
+    2) water tank capacity in liters (float)
+    3) amount of coffee beans in grams (int)
+    4) current temperature in degrees Celsius (float)
+    5) days before servicing (int)
+3 things it can do:
+    1) brew a cup of coffee
+    2) refill water
+    3) select coffee type
+
+Thing 2) Smart Thermostat
+5 properties:
+    1) current room temperature (float)
+    2) desired temperature (float)
+    3) energy consumption in kilowatt-hours (float)
+    4) mode 'Heat', 'Cool, 'Auto' (std::string)
+    5) is wifi connected (bool)
+3 things it can do:
+    1) adjust room temperature
+    2) switch between modes
+    3) send report of energy usage
+
+Thing 3) Library Account
+5 properties:
+    1) number of books currently checked out (int)
+    2) total number of books allowed to borrow (int)
+    3) fine amount due in dollars (double)
+    4) account status 'active', 'suspended' (std::string)
+    5) number of days until book return due (int)
+3 things it can do:
+    1) check out books
+    2) pay fines
+    3) renew borrowed books
+
+Thing 4) Exercise Bike
+5 properties:
+    1) current speed in kilometers per hour (float)
+    2) total distance covered in kilometers (float)
+    3) resistance level (int)
+    4) heart rate of the user (int)
+    5) number of calories burned (double)
+3 things it can do:
+    1) increase or decrease resistance
+    2) track distance and speed
+    3) monitor user's heart rate
+
+Thing 5) Cockpit
+5 properties:
+    1) Number of control panels (int)
+    2) Type of autopilot system (std::string)
+    3) Visibility through windshield (bool)
+    4) Number of seats (int)
+    5) Amount of emergency equipment (int)
+3 things it can do:
+    1) Navigate the airplane
+    2) Communicate with air traffic control
+    3) Monitor airplane systems
+
+Thing 6) Engine
+5 properties:
+    1) Thrust power in kilonewtons (float)
+    2) Fuel consumption rate per hour (float)
+    3) Type of engine (std::string)
+    4) Operating temperature range (float)
+    5) Current RPM (int)
+3 things it can do:
+    1) Propel the airplane
+    2) Adjust thrust levels
+    3) Start
+
+Thing 7) Wings
+5 properties:
+    1) Wingspan in meters (float)
+    2) Fuel capacity in liters (float)
+    3) Number of flaps (int)
+    4) Material type (std::string)
+    5) Elasticity in percent (double)
+3 things it can do:
+    1) Provide lift
+    2) Control wing tilt
+    3) Adjust for maneuvering and stability
+
+Thing 8) Landing Gear
+5 properties:
+    1) Number of wheels (int)
+    2) Maximum weight capacity (float)
+    3) Retractable or fixed (bool)
+    4) Brake effectiveness (int)
+    5) Shock absorption level (float)
+3 things it can do:
+    1) Deploy
+    2) Retract
+    3) Break
+
+Thing 9) Cabin
+5 properties:
+    1) Number of passenger seats (int)
+    2) Available legroom in inches (float)
+    3) Number of restrooms (int)
+    4) Onboard entertainment options (std::string)
+    5) Air filtration system quality (int)
+3 things it can do:
+    1) Adjust temperature
+    2) Control Pressure
+    3) Monitor air quality
+
+Thing 10) Airplane
+5 properties:
+    1) Cockpit
+    2) Engines
+    3) Wings
+    4) Landing Gear
+    5) Cabin
+3 things it can do:
+    1) Take off
+    2) Land
+    3) Navigate
 */
-
-
-
-
 
 
 
