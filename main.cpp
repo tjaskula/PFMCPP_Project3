@@ -1709,6 +1709,29 @@ struct CellPhone
     bool sendAText(std::string number, std::string messageToSend); //returns true if the text was sent
     int runApplication(std::string applicationName); //returns how much memory (bytes) the application asked for
 };
+
+struct Cockpit        { };
+struct Engine         { };
+struct Wings          { };
+struct LandingGear    { };
+struct Cabin          { };
+
+struct Airplane
+{
+    Cockpit cockpit;
+    Engine engine;
+    Wings wings;
+    LandingGear landingGear;
+    Cabin cabin;
+
+    void takeOff(); // Initiates the airplane's takeoff sequence.
+
+    // land
+    void land(); // Initiates the airplane's landing sequence.
+
+    // navigate
+    void navigate(const std::string& destination); // destination: The target destination to navigate to.
+};
  /*
 =================
 Part 1e - Step 14: Commit
