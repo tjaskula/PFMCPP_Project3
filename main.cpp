@@ -884,6 +884,197 @@ struct CarWash
     //    - charge customer
     //    - detail the car interior
 };
+
+struct CoffeeMachine
+{
+    // number of coffee types available
+    int numberOfCoffeeTypes = 10;
+    // water tank capacity in liters
+    float waterTankCapacityLiters = 1.5f;
+    // amount of coffee beans in grams
+    int coffeeBeansGrams = 500;
+    // current temperature in degrees Celsius
+    float currentTemperatureCelsius = 90.0f;
+    // days before servicing
+    int daysBeforeServicing = 30;
+
+    // 3 things it can do:
+    //     - brew a cup of coffee
+    //     - refill water
+    //     - select coffee type
+};
+
+struct SmartThermostat
+{
+    // current room temperature
+    float currentRoomTemperature = 20.0f;
+    // desired temperature setting
+    float desiredTemperature = 22.0f;
+    // energy consumption in kilowatt-hours
+    float energyConsumptionKWh = 3.5f;
+    // mode 'Heat', 'Cool, 'Auto'
+    std::string mode = "Auto";
+    // is wifi connected
+    bool isWifiConnected = true;
+
+    // 3 things it can do:
+    //     - adjust room temperature
+    //     - switch between modes
+    //     - send report of energy usage
+};
+
+struct LibraryAccount
+{
+    // number of books currently checked out
+    int booksCheckedOut = 3;
+    // total number of books allowed to borrow
+    int totalBooksAllowed = 10;
+    // fine amount due in dollars
+    double fineAmountDue = 0.0;
+    // account status 'active', 'suspended'
+    std::string accountStatus = "active";
+    // number of days until book return due
+    int daysUntilReturnDue = 14;
+
+    // 3 things it can do:
+    //     - check out books
+    //     - pay fines
+    //     - renew borrowed books
+};
+
+struct ExerciseBike
+{
+    // current speed in kilometers per hour
+    float currentSpeedKmPerHour = 0.0f;
+    // total distance covered in kilometers
+    float totalDistanceKm = 0.0f;
+    // resistance level
+    int resistanceLevel = 1;
+    // heart rate of the user
+    int userHeartRate = 60;
+    // number of calories burned
+    double caloriesBurned = 0.0;
+
+    // 3 things it can do:
+    //     - increase or decrease resistance
+    //     - track distance and speed
+    //     - monitor user's heart rate
+};
+
+struct Cockpit
+{
+    // number of control panels
+    int numberOfControlPanels = 4;
+    // type of autopilot system
+    std::string autopilotSystemType = "Advanced";
+    // visibility through windshield
+    bool visibilityThroughWindshield = true;
+    // number of seats
+    int numberOfSeats = 2;
+    // amount of emergency equipment
+    int amountOfEmergencyEquipment = 5;
+
+    // 3 things it can do:
+    //     - navigate the airplane
+    //     - communicate with air traffic control
+    //     - monitor airplane systems
+};
+
+struct Engine
+{
+    // thrust power in kilonewtons
+    float thrustPowerKiloNewtons = 100.0f;
+    // fuel consumption rate per hour
+    float fuelConsumptionPerHour = 50.0f;
+    // type of engine
+    std::string engineType = "Jet";
+    // operating temperature range
+    float operatingTemperatureRange = 150.0f;
+    // current RPM
+    int currentRPM = 2000;
+
+    // 3 things it can do:
+    //     - propel the airplane
+    //     - adjust thrust levels
+    //     - start the engine
+};
+
+struct Wings
+{
+    // wingspan in meters
+    float wingspanMeters = 20.0f;
+    // fuel capacity in liters
+    float fuelCapacityLiters = 2000.0f;
+    // number of flaps
+    int numberOfFlaps = 4;
+    // material type
+    std::string materialType = "Composite";
+    // elasticity in percent
+    double elasticityPercent = 5.0;
+
+    // 3 things it can do:
+    //     - provide lift
+    //     - control wing tilt
+    //     - adjust for maneuvering and stability
+};
+
+struct LandingGear
+{
+    // number of wheels
+    int numberOfWheels = 6;
+    // maximum weight capacity
+    float maximumWeightCapacity = 10000.0f;
+    // retractable or fixed
+    bool isRetractable = true;
+    // brake effectiveness
+    int brakeEffectiveness = 8; // Scale of 1-10
+    // shock absorption level
+    float shockAbsorptionLevel = 7.5f;
+
+    // 3 things it can do:
+    //     - deploy
+    //     - retract
+    //     - brake
+};
+
+struct Cabin
+{
+    // number of passenger seats
+    int numberOfPassengerSeats = 150;
+    // available legroom in inches
+    float availableLegroomInches = 32.0f;
+    // number of restrooms
+    int numberOfRestrooms = 2;
+    // onboard entertainment options
+    std::string onboardEntertainmentOptions = "Movies, Music";
+    // air filtration system quality
+    int airFiltrationSystemQuality = 9; // Scale of 1-10
+
+    // 3 things it can do:
+    //     - adjust temperature
+    //     - control cabin pressure
+    //     - monitor air quality
+};
+
+struct Airplane
+{
+    // cockpit
+    Cockpit cockpit;
+    // engines
+    Engine engine;
+    // wings
+    Wings wings;
+    // landing gear
+    Landing Gear landingGear;
+    // cabin
+    Cabin cabin;
+
+    // 3 things it can do:
+    //     - take off
+    //     - land
+    //     - navigate
+};
+
 /*
 
 =================
