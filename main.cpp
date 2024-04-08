@@ -1595,6 +1595,76 @@ struct CarWash
     Keep this in mind when you define your UDTs in this project part.
     */
 };
+
+
+struct Cockpit
+{
+    int numberOfControlPanels = 4;
+    std::string autopilotSystemType = "Advanced";
+    bool visibilityThroughWindshield = true;
+    int numberOfSeats = 2;
+    int amountOfEmergencyEquipment = 5;
+
+    struct NavigationSystem
+    {
+        float gpsLatitude = 0.0f;
+        float gpsLongitude = 0.0f;
+        bool hasAutoPilotCapability = true;
+        std::string currentFlightPlan = "N/A";
+        float altitude = 10000.0f;
+
+        void updateFlightPlan(const std::string& newFlightPlan);
+        void changeAltitude(float newAltitude);
+        void activateAutoPilot();
+    };
+
+    void navigateAirplane();
+    void communicateWithATC(const std::string& message);
+    void monitorSystems();
+
+    // Function to import navigation settings from another source (e.g., a backup system)
+    void importNavigationSettings(NavigationSystem backupNavigationSystem);
+
+    // Function to perform a diagnostic check on the navigation system
+    void performDiagnosticOnSystem(NavigationSystem systemToCheck);
+
+    NavigationSystem navigationSystem;
+};
+
+struct Engine
+{
+    float thrustPowerKiloNewtons = 100.0f;
+    float fuelConsumptionPerHour = 50.0f;
+    std::string engineType = "Jet";
+    float operatingTemperatureRange = 150.0f;
+    int currentRPM = 2000;
+
+    struct ThrustControl
+    {
+        float maxThrustKiloNewtons = 120.0f;
+        float currentThrustKiloNewtons = 100.0f;
+        bool isAfterburnerActive = false;
+        int thrustEfficiencyPercentage = 90;
+        float fuelFlowRate = 0.0f;
+
+        void increaseThrust(float amount);
+        void activateAfterburner();
+        void decreaseThrust(float amount);
+    };
+
+    void propelAirplane();
+    void adjustThrust(float newThrustLevel);
+    void startEngine();
+
+    // Function to adjust thrust settings to match another engine
+    void adjustToMatchOtherEngine(ThrustControl otherEngineThrustControl);
+
+    // Function to initiate an emergency shutdown using thrust control parameters
+    void initiateEmergencyShutdown(ThrustControl emergencyControlSettings);
+
+    ThrustControl thrustControl;
+};
+
 /*
 =================
 Part 1e - Step 12: Commit
