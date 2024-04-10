@@ -147,98 +147,54 @@ struct CarWash
 
 struct CoffeeMachine
 {
-    // number of coffee types available
     int numberOfCoffeeTypes = 10;
-    // water tank capacity in liters
     float waterTankCapacityLiters = 1.5f;
-    // amount of coffee beans in grams
     int coffeeBeansGrams = 500;
-    // current temperature in degrees Celsius
     float currentTemperatureCelsius = 90.0f;
-    // days before servicing
     int daysBeforeServicing = 30;
 
-    // 3 things it can do:
-    // brew a cup of coffee
     void brewCoffee(int coffeeTypeIndex);
-
-    // refill water
-    void refillWater(float waterAmountLiters); // waterAmountLiters: Amount of water to refill.
-
-    // select coffee type
+    void refillWater(float waterAmountLiters);
     void selectCoffeeType(int coffeeTypeIndex);
 };
 
 struct SmartThermostat
 {
-    // current room temperature
     float currentRoomTemperature = 20.0f;
-    // desired temperature setting
     float desiredTemperature = 22.0f;
-    // energy consumption in kilowatt-hours
     float energyConsumptionKWh = 3.5f;
-    // mode 'Heat', 'Cool, 'Auto'
     std::string mode = "Auto";
-    // is wifi connected
     bool isWifiConnected = true;
 
-    // 3 things it can do:
-    // adjust room temperature
-    void adjustTemperature(float newTemperature); // newTemperature: The new desired temperature.
-
-    // switch between modes
-    void switchMode(const std::string& newMode); // newMode: New mode to switch to.
-
-    // send report of energy usage
-    float sendEnergyUsageReport(); // Returns the total energy used.
+    void adjustTemperature(float newTemperature);
+    void switchMode(const std::string& newMode);
+    float sendEnergyUsageReport();
 };
 
 struct LibraryAccount
 {
-    // number of books currently checked out
     int booksCheckedOut = 3;
-    // total number of books allowed to borrow
     int totalBooksAllowed = 10;
-    // fine amount due in dollars
     double fineAmountDue = 0.0;
-    // account status 'active', 'suspended'
     std::string accountStatus = "active";
-    // number of days until book return due
     int daysUntilReturnDue = 14;
 
-    // 3 things it can do:
-    // check out books
-    void checkOutBooks(int numberOfBooks); // numberOfBooks: Number of books to check out.
-
-    // pay fines
-    void payFines(double amount); // amount: Amount of fine to pay.
-
-    // renew borrowed books
+    void checkOutBooks(int numberOfBooks);
+    void payFines(double amount);
     void renewBooks();
 };
 
 struct ExerciseBike
 {
-    // current speed in kilometers per hour
     float currentSpeedKmPerHour = 0.0f;
-    // total distance covered in kilometers
     float totalDistanceKm = 0.0f;
-    // resistance level
     int resistanceLevel = 1;
-    // heart rate of the user
     int userHeartRate = 60;
-    // number of calories burned
     double caloriesBurned = 0.0;
 
-    // 3 things it can do:
-    // increase or decrease resistance
-    void adjustResistance(int newResistanceLevel); // newResistanceLevel: The new resistance level.
-
-    // track distance and speed
-    void trackDistanceAndSpeed(); // Updates the total distance and current speed.
-
-    // monitor user's heart rate
-    int monitorHeartRate(); // Returns the current heart rate of the user.
+    void adjustResistance(int newResistanceLevel);
+    void trackDistanceAndSpeed();
+    int monitorHeartRate();
 };
 
 struct Cockpit
@@ -265,11 +221,7 @@ struct Cockpit
     void navigateAirplane();
     void communicateWithATC(const std::string& message);
     void monitorSystems();
-
-    // Function to import navigation settings from another source (e.g., a backup system)
     void importNavigationSettings(NavigationSystem backupNavigationSystem);
-
-    // Function to perform a diagnostic check on the navigation system
     void performDiagnosticOnSystem(NavigationSystem systemToCheck);
 
     NavigationSystem navigationSystem;
@@ -299,11 +251,7 @@ struct Engine
     void propelAirplane();
     void adjustThrust(float newThrustLevel);
     void startEngine();
-
-    // Function to adjust thrust settings to match another engine
     void adjustToMatchOtherEngine(ThrustControl otherEngineThrustControl);
-
-    // Function to initiate an emergency shutdown using thrust control parameters
     void initiateEmergencyShutdown(ThrustControl emergencyControlSettings);
 
     ThrustControl thrustControl;
@@ -311,98 +259,54 @@ struct Engine
 
 struct Wings
 {
-    // wingspan in meters
     float wingspanMeters = 20.0f;
-    // fuel capacity in liters
     float fuelCapacityLiters = 2000.0f;
-    // number of flaps
     int numberOfFlaps = 4;
-    // material type
     std::string materialType = "Composite";
-    // elasticity in percent
     double elasticityPercent = 5.0;
 
-    // 3 things it can do:
-    // provide lift
-    void provideLift(); // Generates lift to keep the airplane airborne.
-
-    // control wing tilt
-    void controlTilt(float angle); // angle: The angle to tilt the wings.
-
-    // adjust for maneuvering and stability
-    void adjustForManeuvering(); // Adjusts wing flaps for better maneuvering and stability.
+    void provideLift();
+    void controlTilt(float angle);
+    void adjustForManeuvering();
 };
 
 struct LandingGear
 {
-    // number of wheels
     int numberOfWheels = 6;
-    // maximum weight capacity
     float maximumWeightCapacity = 10000.0f;
-    // retractable or fixed
     bool isRetractable = true;
-    // brake effectiveness
-    int brakeEffectiveness = 8; // Scale of 1-10
-    // shock absorption level
+    int brakeEffectiveness = 8;
     float shockAbsorptionLevel = 7.5f;
 
-    // 3 things it can do:
-    // deploy
-    void deploy(); // Deploys the landing gear for landing.
-
-    // retract
-    void retract(); // Retracts the landing gear after takeoff.
-
-    // brake
-    void activateBrakes(); // Activates the brakes to slow down or stop the airplane.
+    void deploy();
+    void retract();
+    void activateBrakes();
 };
 
 struct Cabin
 {
-    // number of passenger seats
     int numberOfPassengerSeats = 150;
-    // available legroom in inches
     float availableLegroomInches = 32.0f;
-    // number of restrooms
     int numberOfRestrooms = 2;
-    // onboard entertainment options
     std::string onboardEntertainmentOptions = "Movies, Music";
-    // air filtration system quality
-    int airFiltrationSystemQuality = 9; // Scale of 1-10
+    int airFiltrationSystemQuality = 9;
 
-    // 3 things it can do:
-    // adjust temperature
-    void adjustTemperature(float newTemperature); // newTemperature: The new cabin temperature.
-
-    // control cabin pressure
-    void controlPressure(); // Maintains optimal cabin pressure.
-
-    // monitor air quality
-    void monitorAirQuality(); // Checks and regulates the quality of the air in the cabin.
+    void adjustTemperature(float newTemperature);
+    void controlPressure();
+    void monitorAirQuality();
 };
 
 struct Airplane
 {
-    // cockpit
     Cockpit cockpit;
-    // engines
     Engine engine;
-    // wings
     Wings wings;
-    // landing gear
     LandingGear landingGear;
-    // cabin
     Cabin cabin;
 
-    // 3 things it can do:
-    // take off
-    void takeOff(); // Initiates the airplane's takeoff sequence.
-
-    // land
-    void land(); // Initiates the airplane's landing sequence.
-
-    // navigate
-    void navigate(const std::string& destination); // destination: The target destination to navigate to.
+    void takeOff();
+    void land();
+    void navigate(const std::string& destination); 
 };
 
 int main()
