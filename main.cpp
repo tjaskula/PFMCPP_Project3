@@ -83,51 +83,51 @@ Main Object: Car Interior
         Name 4 nouns you'll find on the [Sub Object]
             1) paddle shifters
             2) 'cruise control' controls
-            3) 
-            4) 
+            3) horn button
+            4) audio system controls
         Name 2 actions that the [Sub Object] can do:
             1) adjust cruise control settings.
-            2)
+            2) turn the vehicle
         
     Sub Object: Instrument Cluster
         Name 4 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
-            4)
+            1) speedometer
+            2) tachometer
+            3) fuel gauge
+            4) engine temperature gauge
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) display vehicle speed
+            2) indicate RPM (Revolutions Per Minute)
+            3) show fuel level
     
     Sub Object: Environment Controls
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) temperature control knob
+            2) airflow direction buttons
+            3) fan speed control
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) adjust cabin temperature
+            2) change airflow direction
+            3) modify fan speed
 
     Sub Object: Infotainment System
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) touchscreen display
+            2) volume knob
+            3) navigation map
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) play music
+            2) provide GPS navigation
+            3) connect to mobile devices via Bluetooth
 
     Sub Object: Seat 
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) headrest
+            2) seatbelt
+            3) recline lever
         Name 2 actions that the [Sub Object] can do:
-            1)
-            2)
+            1) adjust seating position
+            2) secure the occupant with the seatbelt
 */
 
 /*
@@ -195,54 +195,6 @@ Part 1b - Step 2: Assignment
         primitives.
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
-
-Thing 1)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 2)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 3)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 4)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
 */
 
 /*
@@ -318,6 +270,7 @@ example:
         Brightness (double)
         area in cm2 (int)
         brand (std::string)
+
 */
 
 /*
@@ -336,18 +289,6 @@ Part 1c - Step 4: Assignment
 Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
-
-Thing 10)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
  */
 
  /*
@@ -433,66 +374,6 @@ example:
     If #10's first property was 'Engine', then `Thing 5)` will be `Engine`. 
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
-
-Thing 5)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 6)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 7)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 8)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 9)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
  */
 
 /*
@@ -544,12 +425,6 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
 */
-
-
-
-
-
-
 
 
 /*
@@ -618,6 +493,7 @@ struct CarWash  //This is the empty struct, below my plain-English UDT.
 Notice that the struct name 'CarWash' conforms with the Course Coding Standard, described in the Readme.MD
 */
 
+
 /*
 =================
 Part 1e - Step 2: Commit
@@ -652,6 +528,7 @@ struct CarWash
     //    - charge customer
     //    - detail the car interior
 };
+
 
 /*
 =================
@@ -689,6 +566,7 @@ struct CarWash
     //    - charge customer
     //    - detail the car interior
 };
+
 /*
 
 =================
@@ -732,6 +610,7 @@ struct CarWash
     //detail the car interior
     void detailInterior();
 };
+
 /*
 =================
 Part 1e - Step 8: Commit
@@ -911,6 +790,7 @@ struct CarWash
     Keep this in mind when you define your UDTs in this project part.
     */
 };
+
 /*
 =================
 Part 1e - Step 12: Commit
@@ -955,6 +835,7 @@ struct CellPhone
     bool sendAText(std::string number, std::string messageToSend); //returns true if the text was sent
     int runApplication(std::string applicationName); //returns how much memory (bytes) the application asked for
 };
+
  /*
 =================
 Part 1e - Step 14: Commit
@@ -1011,12 +892,265 @@ paste your code below
 */
 
 
+struct CoffeeMachine
+{
+    // number of coffee types available
+    int numberOfCoffeeTypes = 10;
+    // water tank capacity in liters
+    float waterTankCapacityLiters = 1.5f;
+    // amount of coffee beans in grams
+    int coffeeBeansGrams = 500;
+    // current temperature in degrees Celsius
+    float currentTemperatureCelsius = 90.0f;
+    // days before servicing
+    int daysBeforeServicing = 30;
 
+    // 3 things it can do:
+    // brew a cup of coffee
+    void brewCoffee(int coffeeTypeIndex);
 
+    // refill water
+    void refillWater(float waterAmountLiters); // waterAmountLiters: Amount of water to refill.
 
+    // select coffee type
+    void selectCoffeeType(int coffeeTypeIndex);
+};
 
+struct SmartThermostat
+{
+    // current room temperature
+    float currentRoomTemperature = 20.0f;
+    // desired temperature setting
+    float desiredTemperature = 22.0f;
+    // energy consumption in kilowatt-hours
+    float energyConsumptionKWh = 3.5f;
+    // mode 'Heat', 'Cool, 'Auto'
+    std::string mode = "Auto";
+    // is wifi connected
+    bool isWifiConnected = true;
 
+    // 3 things it can do:
+    // adjust room temperature
+    void adjustTemperature(float newTemperature); // newTemperature: The new desired temperature.
 
+    // switch between modes
+    void switchMode(const std::string& newMode); // newMode: New mode to switch to.
+
+    // send report of energy usage
+    float sendEnergyUsageReport(); // Returns the total energy used.
+};
+
+struct LibraryAccount
+{
+    // number of books currently checked out
+    int booksCheckedOut = 3;
+    // total number of books allowed to borrow
+    int totalBooksAllowed = 10;
+    // fine amount due in dollars
+    double fineAmountDue = 0.0;
+    // account status 'active', 'suspended'
+    std::string accountStatus = "active";
+    // number of days until book return due
+    int daysUntilReturnDue = 14;
+
+    // 3 things it can do:
+    // check out books
+    void checkOutBooks(int numberOfBooks); // numberOfBooks: Number of books to check out.
+
+    // pay fines
+    void payFines(double amount); // amount: Amount of fine to pay.
+
+    // renew borrowed books
+    void renewBooks();
+};
+
+struct ExerciseBike
+{
+    // current speed in kilometers per hour
+    float currentSpeedKmPerHour = 0.0f;
+    // total distance covered in kilometers
+    float totalDistanceKm = 0.0f;
+    // resistance level
+    int resistanceLevel = 1;
+    // heart rate of the user
+    int userHeartRate = 60;
+    // number of calories burned
+    double caloriesBurned = 0.0;
+
+    // 3 things it can do:
+    // increase or decrease resistance
+    void adjustResistance(int newResistanceLevel); // newResistanceLevel: The new resistance level.
+
+    // track distance and speed
+    void trackDistanceAndSpeed(); // Updates the total distance and current speed.
+
+    // monitor user's heart rate
+    int monitorHeartRate(); // Returns the current heart rate of the user.
+};
+
+struct Cockpit
+{
+    int numberOfControlPanels = 4;
+    std::string autopilotSystemType = "Advanced";
+    bool visibilityThroughWindshield = true;
+    int numberOfSeats = 2;
+    int amountOfEmergencyEquipment = 5;
+
+    struct NavigationSystem
+    {
+        float gpsLatitude = 0.0f;
+        float gpsLongitude = 0.0f;
+        bool hasAutoPilotCapability = true;
+        std::string currentFlightPlan = "N/A";
+        float altitude = 10000.0f;
+
+        void updateFlightPlan(const std::string& newFlightPlan);
+        void changeAltitude(float newAltitude);
+        void activateAutoPilot();
+    };
+
+    void navigateAirplane();
+    void communicateWithATC(const std::string& message);
+    void monitorSystems();
+
+    // Function to import navigation settings from another source (e.g., a backup system)
+    void importNavigationSettings(NavigationSystem backupNavigationSystem);
+
+    // Function to perform a diagnostic check on the navigation system
+    void performDiagnosticOnSystem(NavigationSystem systemToCheck);
+
+    NavigationSystem navigationSystem;
+};
+
+struct Engine
+{
+    float thrustPowerKiloNewtons = 100.0f;
+    float fuelConsumptionPerHour = 50.0f;
+    std::string engineType = "Jet";
+    float operatingTemperatureRange = 150.0f;
+    int currentRPM = 2000;
+
+    struct ThrustControl
+    {
+        float maxThrustKiloNewtons = 120.0f;
+        float currentThrustKiloNewtons = 100.0f;
+        bool isAfterburnerActive = false;
+        int thrustEfficiencyPercentage = 90;
+        float fuelFlowRate = 0.0f;
+
+        void increaseThrust(float amount);
+        void activateAfterburner();
+        void decreaseThrust(float amount);
+    };
+
+    void propelAirplane();
+    void adjustThrust(float newThrustLevel);
+    void startEngine();
+
+    // Function to adjust thrust settings to match another engine
+    void adjustToMatchOtherEngine(ThrustControl otherEngineThrustControl);
+
+    // Function to initiate an emergency shutdown using thrust control parameters
+    void initiateEmergencyShutdown(ThrustControl emergencyControlSettings);
+
+    ThrustControl thrustControl;
+};
+
+struct Wings
+{
+    // wingspan in meters
+    float wingspanMeters = 20.0f;
+    // fuel capacity in liters
+    float fuelCapacityLiters = 2000.0f;
+    // number of flaps
+    int numberOfFlaps = 4;
+    // material type
+    std::string materialType = "Composite";
+    // elasticity in percent
+    double elasticityPercent = 5.0;
+
+    // 3 things it can do:
+    // provide lift
+    void provideLift(); // Generates lift to keep the airplane airborne.
+
+    // control wing tilt
+    void controlTilt(float angle); // angle: The angle to tilt the wings.
+
+    // adjust for maneuvering and stability
+    void adjustForManeuvering(); // Adjusts wing flaps for better maneuvering and stability.
+};
+
+struct LandingGear
+{
+    // number of wheels
+    int numberOfWheels = 6;
+    // maximum weight capacity
+    float maximumWeightCapacity = 10000.0f;
+    // retractable or fixed
+    bool isRetractable = true;
+    // brake effectiveness
+    int brakeEffectiveness = 8; // Scale of 1-10
+    // shock absorption level
+    float shockAbsorptionLevel = 7.5f;
+
+    // 3 things it can do:
+    // deploy
+    void deploy(); // Deploys the landing gear for landing.
+
+    // retract
+    void retract(); // Retracts the landing gear after takeoff.
+
+    // brake
+    void activateBrakes(); // Activates the brakes to slow down or stop the airplane.
+};
+
+struct Cabin
+{
+    // number of passenger seats
+    int numberOfPassengerSeats = 150;
+    // available legroom in inches
+    float availableLegroomInches = 32.0f;
+    // number of restrooms
+    int numberOfRestrooms = 2;
+    // onboard entertainment options
+    std::string onboardEntertainmentOptions = "Movies, Music";
+    // air filtration system quality
+    int airFiltrationSystemQuality = 9; // Scale of 1-10
+
+    // 3 things it can do:
+    // adjust temperature
+    void adjustTemperature(float newTemperature); // newTemperature: The new cabin temperature.
+
+    // control cabin pressure
+    void controlPressure(); // Maintains optimal cabin pressure.
+
+    // monitor air quality
+    void monitorAirQuality(); // Checks and regulates the quality of the air in the cabin.
+};
+
+struct Airplane
+{
+    // cockpit
+    Cockpit cockpit;
+    // engines
+    Engine engine;
+    // wings
+    Wings wings;
+    // landing gear
+    LandingGear landingGear;
+    // cabin
+    Cabin cabin;
+
+    // 3 things it can do:
+    // take off
+    void takeOff(); // Initiates the airplane's takeoff sequence.
+
+    // land
+    void land(); // Initiates the airplane's landing sequence.
+
+    // navigate
+    void navigate(const std::string& destination); // destination: The target destination to navigate to.
+};
 
 int main()
 {
