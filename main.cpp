@@ -195,8 +195,6 @@ Part 1b - Step 2: Assignment
         primitives.
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
-
-MOVED bellow to part 1d
 */
 
 /*
@@ -273,7 +271,6 @@ example:
         area in cm2 (int)
         brand (std::string)
 
-MOVED bellow to part 1d
 */
 
 /*
@@ -292,8 +289,6 @@ Part 1c - Step 4: Assignment
 Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
-
-MOVED bellow to Part 1d
  */
 
  /*
@@ -379,8 +374,6 @@ example:
     If #10's first property was 'Engine', then `Thing 5)` will be `Engine`. 
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
-
-MOVED bellow to Part 1d
  */
 
 /*
@@ -406,8 +399,6 @@ example:
         Brightness (double)
         width in cm (int)
         height in cm (int)
-
-MOVED below to Part 1d
 */
 
 /*
@@ -433,129 +424,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I do not want to see 2 copies of your Plain-English UDTs.  
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
-
-Thing 1) Coffee Machine
-5 properties:
-    1) number of coffee types available (int)
-    2) water tank capacity in liters (float)
-    3) amount of coffee beans in grams (int)
-    4) current temperature in degrees Celsius (float)
-    5) days before servicing (int)
-3 things it can do:
-    1) brew a cup of coffee
-    2) refill water
-    3) select coffee type
-
-Thing 2) Smart Thermostat
-5 properties:
-    1) current room temperature (float)
-    2) desired temperature (float)
-    3) energy consumption in kilowatt-hours (float)
-    4) mode 'Heat', 'Cool, 'Auto' (std::string)
-    5) is wifi connected (bool)
-3 things it can do:
-    1) adjust room temperature
-    2) switch between modes
-    3) send report of energy usage
-
-Thing 3) Library Account
-5 properties:
-    1) number of books currently checked out (int)
-    2) total number of books allowed to borrow (int)
-    3) fine amount due in dollars (double)
-    4) account status 'active', 'suspended' (std::string)
-    5) number of days until book return due (int)
-3 things it can do:
-    1) check out books
-    2) pay fines
-    3) renew borrowed books
-
-Thing 4) Exercise Bike
-5 properties:
-    1) current speed in kilometers per hour (float)
-    2) total distance covered in kilometers (float)
-    3) resistance level (int)
-    4) heart rate of the user (int)
-    5) number of calories burned (double)
-3 things it can do:
-    1) increase or decrease resistance
-    2) track distance and speed
-    3) monitor user's heart rate
-
-Thing 5) Cockpit
-5 properties:
-    1) Number of control panels (int)
-    2) Type of autopilot system (std::string)
-    3) Visibility through windshield (bool)
-    4) Number of seats (int)
-    5) Amount of emergency equipment (int)
-3 things it can do:
-    1) Navigate the airplane
-    2) Communicate with air traffic control
-    3) Monitor airplane systems
-
-Thing 6) Engine
-5 properties:
-    1) Thrust power in kilonewtons (float)
-    2) Fuel consumption rate per hour (float)
-    3) Type of engine (std::string)
-    4) Operating temperature range (float)
-    5) Current RPM (int)
-3 things it can do:
-    1) Propel the airplane
-    2) Adjust thrust levels
-    3) Start
-
-Thing 7) Wings
-5 properties:
-    1) Wingspan in meters (float)
-    2) Fuel capacity in liters (float)
-    3) Number of flaps (int)
-    4) Material type (std::string)
-    5) Elasticity in percent (double)
-3 things it can do:
-    1) Provide lift
-    2) Control wing tilt
-    3) Adjust for maneuvering and stability
-
-Thing 8) Landing Gear
-5 properties:
-    1) Number of wheels (int)
-    2) Maximum weight capacity (float)
-    3) Retractable or fixed (bool)
-    4) Brake effectiveness (int)
-    5) Shock absorption level (float)
-3 things it can do:
-    1) Deploy
-    2) Retract
-    3) Break
-
-Thing 9) Cabin
-5 properties:
-    1) Number of passenger seats (int)
-    2) Available legroom in inches (float)
-    3) Number of restrooms (int)
-    4) Onboard entertainment options (std::string)
-    5) Air filtration system quality (int)
-3 things it can do:
-    1) Adjust temperature
-    2) Control Pressure
-    3) Monitor air quality
-
-Thing 10) Airplane
-5 properties:
-    1) Cockpit
-    2) Engines
-    3) Wings
-    4) Landing Gear
-    5) Cabin
-3 things it can do:
-    1) Take off
-    2) Land
-    3) Navigate
 */
-
-
 
 
 /*
@@ -624,55 +493,7 @@ struct CarWash  //This is the empty struct, below my plain-English UDT.
 Notice that the struct name 'CarWash' conforms with the Course Coding Standard, described in the Readme.MD
 */
 
-struct CoffeeMachine
-{
-    
-};
 
-struct SmartThermostat
-{
-
-};
-
-struct LibraryAccount
-{
-
-};
-
-struct ExerciseBike
-{
-
-};
-
-struct Cockpit
-{
-
-};
-
-struct Engine
-{
-
-};
-
-struct Wings
-{
-
-};
-
-struct LandingGear
-{
-
-};
-
-struct Cabin
-{
-
-};
-
-struct Airplane
-{
-
-};
 /*
 =================
 Part 1e - Step 2: Commit
@@ -708,145 +529,6 @@ struct CarWash
     //    - detail the car interior
 };
 
-struct CoffeeMachine
-{
-    // 5 properties:
-    //     - number of coffee types available (int)
-    //     - water tank capacity in liters (float)
-    //     - amount of coffee beans in grams (int)
-    //     - current temperature in degrees Celsius (float)
-    //     - days before servicing (int)
-    // 3 things it can do:
-    //     - brew a cup of coffee
-    //     - refill water
-    //     - select coffee type
-};
-
-struct SmartThermostat
-{
-    // 5 properties:
-    //     - current room temperature (float)
-    //     - desired temperature (float)
-    //     - energy consumption in kilowatt-hours (float)
-    //     - mode 'Heat', 'Cool, 'Auto' (std::string)
-    //     - is wifi connected (bool)
-    // 3 things it can do:
-    //     - adjust room temperature
-    //     - switch between modes
-    //     - send report of energy usage
-};
-
-struct LibraryAccount
-{
-    // 5 properties:
-    //     - number of books currently checked out (int)
-    //     - total number of books allowed to borrow (int)
-    //     - fine amount due in dollars (double)
-    //     - account status 'active', 'suspended' (std::string)
-    //     - number of days until book return due (int)
-    // 3 things it can do:
-    //     - check out books
-    //     - pay fines
-    //     - renew borrowed books
-};
-
-struct ExerciseBike
-{
-    // 5 properties:
-    //     - current speed in kilometers per hour (float)
-    //     - total distance covered in kilometers (float)
-    //     - resistance level (int)
-    //     - heart rate of the user (int)
-    //     - number of calories burned (double)
-    // 3 things it can do:
-    //     - increase or decrease resistance
-    //     - track distance and speed
-    //     - monitor user's heart rate
-};
-
-struct Cockpit
-{
-    // 5 properties:
-    //     - Number of control panels (int)
-    //     - Type of autopilot system (std::string)
-    //     - Visibility through windshield (bool)
-    //     - Number of seats (int)
-    //     - Amount of emergency equipment (int)
-    // 3 things it can do:
-    //     - Navigate the airplane
-    //     - Communicate with air traffic control
-    //     - Monitor airplane systems
-};
-
-struct Engine
-{
-    // 5 properties:
-    //     - Thrust power in kilonewtons (float)
-    //     - Fuel consumption rate per hour (float)
-    //     - Type of engine (std::string)
-    //     - Operating temperature range (float)
-    //     - Current RPM (int)
-    // 3 things it can do:
-    //     - Propel the airplane
-    //     - Adjust thrust levels
-    //     - Start
-};
-
-struct Wings
-{
-    // 5 properties:
-    //     - Wingspan in meters (float)
-    //     - Fuel capacity in liters (float)
-    //     - Number of flaps (int)
-    //     - Material type (std::string)
-    //     - Elasticity in percent (double)
-    // 3 things it can do:
-    //     - Provide lift
-    //     - Control wing tilt
-    //     - Adjust for maneuvering and stability
-};
-
-struct LandingGear
-{
-    // 5 properties:
-    //     - Number of wheels (int)
-    //     - Maximum weight capacity (float)
-    //     - Retractable or fixed (bool)
-    //     - Brake effectiveness (int)
-    //     - Shock absorption level (float)
-    // 3 things it can do:
-    //     - Deploy
-    //     - Retract
-    //     - Break
-};
-
-struct Cabin
-{
-    // 5 properties:
-    //     - Number of passenger seats (int)
-    //     - Available legroom in inches (float)
-    //     - Number of restrooms (int)
-    //     - Onboard entertainment options (std::string)
-    //     - Air filtration system quality (int)
-    // 3 things it can do:
-    //     - Adjust temperature
-    //     - Control Pressure
-    //     - Monitor air quality
-};
-
-struct Airplane
-{
-    // 5 properties:
-    //     - Cockpit
-    //     - Engines
-    //     - Wings
-    //     - Landing Gear
-    //     - Cabin
-    // 3 things it can do:
-    //     - Take off
-    //     - Land
-    //     - Navigate
-};
 
 /*
 =================
@@ -883,196 +565,6 @@ struct CarWash
     //    - wash and wax car
     //    - charge customer
     //    - detail the car interior
-};
-
-struct CoffeeMachine
-{
-    // number of coffee types available
-    int numberOfCoffeeTypes = 10;
-    // water tank capacity in liters
-    float waterTankCapacityLiters = 1.5f;
-    // amount of coffee beans in grams
-    int coffeeBeansGrams = 500;
-    // current temperature in degrees Celsius
-    float currentTemperatureCelsius = 90.0f;
-    // days before servicing
-    int daysBeforeServicing = 30;
-
-    // 3 things it can do:
-    //     - brew a cup of coffee
-    //     - refill water
-    //     - select coffee type
-};
-
-struct SmartThermostat
-{
-    // current room temperature
-    float currentRoomTemperature = 20.0f;
-    // desired temperature setting
-    float desiredTemperature = 22.0f;
-    // energy consumption in kilowatt-hours
-    float energyConsumptionKWh = 3.5f;
-    // mode 'Heat', 'Cool, 'Auto'
-    std::string mode = "Auto";
-    // is wifi connected
-    bool isWifiConnected = true;
-
-    // 3 things it can do:
-    //     - adjust room temperature
-    //     - switch between modes
-    //     - send report of energy usage
-};
-
-struct LibraryAccount
-{
-    // number of books currently checked out
-    int booksCheckedOut = 3;
-    // total number of books allowed to borrow
-    int totalBooksAllowed = 10;
-    // fine amount due in dollars
-    double fineAmountDue = 0.0;
-    // account status 'active', 'suspended'
-    std::string accountStatus = "active";
-    // number of days until book return due
-    int daysUntilReturnDue = 14;
-
-    // 3 things it can do:
-    //     - check out books
-    //     - pay fines
-    //     - renew borrowed books
-};
-
-struct ExerciseBike
-{
-    // current speed in kilometers per hour
-    float currentSpeedKmPerHour = 0.0f;
-    // total distance covered in kilometers
-    float totalDistanceKm = 0.0f;
-    // resistance level
-    int resistanceLevel = 1;
-    // heart rate of the user
-    int userHeartRate = 60;
-    // number of calories burned
-    double caloriesBurned = 0.0;
-
-    // 3 things it can do:
-    //     - increase or decrease resistance
-    //     - track distance and speed
-    //     - monitor user's heart rate
-};
-
-struct Cockpit
-{
-    // number of control panels
-    int numberOfControlPanels = 4;
-    // type of autopilot system
-    std::string autopilotSystemType = "Advanced";
-    // visibility through windshield
-    bool visibilityThroughWindshield = true;
-    // number of seats
-    int numberOfSeats = 2;
-    // amount of emergency equipment
-    int amountOfEmergencyEquipment = 5;
-
-    // 3 things it can do:
-    //     - navigate the airplane
-    //     - communicate with air traffic control
-    //     - monitor airplane systems
-};
-
-struct Engine
-{
-    // thrust power in kilonewtons
-    float thrustPowerKiloNewtons = 100.0f;
-    // fuel consumption rate per hour
-    float fuelConsumptionPerHour = 50.0f;
-    // type of engine
-    std::string engineType = "Jet";
-    // operating temperature range
-    float operatingTemperatureRange = 150.0f;
-    // current RPM
-    int currentRPM = 2000;
-
-    // 3 things it can do:
-    //     - propel the airplane
-    //     - adjust thrust levels
-    //     - start the engine
-};
-
-struct Wings
-{
-    // wingspan in meters
-    float wingspanMeters = 20.0f;
-    // fuel capacity in liters
-    float fuelCapacityLiters = 2000.0f;
-    // number of flaps
-    int numberOfFlaps = 4;
-    // material type
-    std::string materialType = "Composite";
-    // elasticity in percent
-    double elasticityPercent = 5.0;
-
-    // 3 things it can do:
-    //     - provide lift
-    //     - control wing tilt
-    //     - adjust for maneuvering and stability
-};
-
-struct LandingGear
-{
-    // number of wheels
-    int numberOfWheels = 6;
-    // maximum weight capacity
-    float maximumWeightCapacity = 10000.0f;
-    // retractable or fixed
-    bool isRetractable = true;
-    // brake effectiveness
-    int brakeEffectiveness = 8; // Scale of 1-10
-    // shock absorption level
-    float shockAbsorptionLevel = 7.5f;
-
-    // 3 things it can do:
-    //     - deploy
-    //     - retract
-    //     - brake
-};
-
-struct Cabin
-{
-    // number of passenger seats
-    int numberOfPassengerSeats = 150;
-    // available legroom in inches
-    float availableLegroomInches = 32.0f;
-    // number of restrooms
-    int numberOfRestrooms = 2;
-    // onboard entertainment options
-    std::string onboardEntertainmentOptions = "Movies, Music";
-    // air filtration system quality
-    int airFiltrationSystemQuality = 9; // Scale of 1-10
-
-    // 3 things it can do:
-    //     - adjust temperature
-    //     - control cabin pressure
-    //     - monitor air quality
-};
-
-struct Airplane
-{
-    // cockpit
-    Cockpit cockpit;
-    // engines
-    Engine engine;
-    // wings
-    Wings wings;
-    // landing gear
-    LandingGear landingGear;
-    // cabin
-    Cabin cabin;
-
-    // 3 things it can do:
-    //     - take off
-    //     - land
-    //     - navigate
 };
 
 /*
@@ -1118,8 +610,6 @@ struct CarWash
     //detail the car interior
     void detailInterior();
 };
-
-// MOVED to the end
 
 /*
 =================
@@ -1184,63 +674,6 @@ struct CarWash
     //detail the car interior
     void detailInterior();
 };
-
-struct Cockpit
-{
-    int numberOfControlPanels = 4;
-    std::string autopilotSystemType = "Advanced";
-    bool visibilityThroughWindshield = true;
-    int numberOfSeats = 2;
-    int amountOfEmergencyEquipment = 5;
-
-    struct NavigationSystem
-    {
-        // 5 properties:
-        float gpsLatitude = 0.0f;
-        float gpsLongitude = 0.0f;
-        bool hasAutoPilotCapability = true;
-        std::string currentFlightPlan = "N/A";
-        float altitude = 10000.0f;
-
-        // 3 things it can do:
-        void updateFlightPlan(const std::string& newFlightPlan);
-        void changeAltitude(float newAltitude);
-        void activateAutoPilot();
-    };
-
-    void navigateAirplane();
-    void communicateWithATC(const std::string& message);
-    void monitorSystems();
-};
-
-struct Engine
-{
-    float thrustPowerKiloNewtons = 100.0f;
-    float fuelConsumptionPerHour = 50.0f;
-    std::string engineType = "Jet";
-    float operatingTemperatureRange = 150.0f;
-    int currentRPM = 2000;
-
-    struct ThrustControl
-    {
-        // 5 properties:
-        float maxThrustKiloNewtons = 120.0f;
-        float currentThrustKiloNewtons = 100.0f;
-        bool isAfterburnerActive = false;
-        int thrustEfficiencyPercentage = 90; // in percent
-        float fuelFlowRate = 0.0f; // fuel flow rate per hour
-
-        // 3 things it can do:
-        void increaseThrust(float amount);
-        void activateAfterburner();
-        void decreaseThrust(float amount);
-    };
-
-    void propelAirplane();
-    void adjustThrust(float newThrustLevel);
-    void startEngine();
-};
-
 /*
 =================
 Part 1e - Step 10: Commit
@@ -1358,9 +791,6 @@ struct CarWash
     */
 };
 
-
-// Moved to the end
-
 /*
 =================
 Part 1e - Step 12: Commit
@@ -1406,28 +836,6 @@ struct CellPhone
     int runApplication(std::string applicationName); //returns how much memory (bytes) the application asked for
 };
 
-struct Cockpit        { };
-struct Engine         { };
-struct Wings          { };
-struct LandingGear    { };
-struct Cabin          { };
-
-struct Airplane
-{
-    Cockpit cockpit;
-    Engine engine;
-    Wings wings;
-    LandingGear landingGear;
-    Cabin cabin;
-
-    void takeOff(); // Initiates the airplane's takeoff sequence.
-
-    // land
-    void land(); // Initiates the airplane's landing sequence.
-
-    // navigate
-    void navigate(const std::string& destination); // destination: The target destination to navigate to.
-};
  /*
 =================
 Part 1e - Step 14: Commit
