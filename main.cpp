@@ -533,7 +533,62 @@ void Engine::ThrustControl::decreaseThrust(float amount)
     std::cout << "Decreased thrust by " << amount << std::endl;
 }
 
-// Implementations for Wings, LandingGear, Cabin, and Airplane would follow a similar pattern.
+// Implementations for Wings
+void Wings::provideLift() {
+    std::cout << "Wings providing lift with wingspan of " << wingspanMeters << " meters." << std::endl;
+}
+
+void Wings::controlTilt(float angle) {
+    std::cout << "Tilting wings to " << angle << " degrees for better maneuverability." << std::endl;
+}
+
+void Wings::adjustForManeuvering() {
+    std::cout << "Adjusting wing flaps and elasticity by " << elasticityPercent << "% for improved stability." << std::endl;
+}
+
+// Implementations for LandingGear
+void LandingGear::deploy() {
+    std::cout << "Deploying " << numberOfWheels << " wheels of landing gear." << std::endl;
+}
+
+void LandingGear::retract() {
+    std::cout << "Retracting landing gear. Gear is " << (isRetractable ? "" : "not ") << "retractable." << std::endl;
+}
+
+void LandingGear::activateBrakes() {
+    std::cout << "Activating brakes with effectiveness level of " << brakeEffectiveness << " out of 10." << std::endl;
+}
+
+// Implementations for Cabin
+void Cabin::adjustTemperature(float newTemperature) {
+    std::cout << "Adjusting cabin temperature from " << availableLegroomInches << " inches legroom space to " << newTemperature << "°C." << std::endl;
+}
+
+void Cabin::controlPressure() {
+    std::cout << "Controlling cabin pressure for " << numberOfPassengerSeats << " seats." << std::endl;
+}
+
+void Cabin::monitorAirQuality() {
+    std::cout << "Monitoring air quality. Filtration system quality: " << airFiltrationSystemQuality << "/10." << std::endl;
+}
+
+// Implementations for Airplane
+void Airplane::takeOff() {
+    std::cout << "Airplane taking off. Cockpit and engines are ready." << std::endl;
+    cockpit.navigateAirplane();
+    engine.propelAirplane();
+}
+
+void Airplane::land() {
+    std::cout << "Airplane landing. Deploying landing gear." << std::endl;
+    landingGear.deploy();
+}
+
+void Airplane::navigate(const std::string& destination) {
+    std::cout << "Airplane navigating to " << destination << ". Autopilot: " << cockpit.autopilotSystemType << "." << std::endl;
+    cockpit.navigateAirplane();
+}
+
 
 
 int main()
