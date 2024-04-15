@@ -608,6 +608,71 @@ int main()
 {
     Example::main(); //do not delete this line
     //add your code here:
+
+    CoffeeMachine coffeeMachine1, coffeeMachine2;
+    SmartThermostat thermostat1, thermostat2;
+    LibraryAccount libraryAccount1, libraryAccount2;
+    ExerciseBike bike1, bike2;
+    Cockpit cockpit1, cockpit2;
+    Engine engine1, engine2;
+    Wings wings1, wings2;
+    LandingGear gear1, gear2;
+    Cabin cabin1, cabin2;
+    Airplane airplane1, airplane2;
+
+    // Call member functions
+    coffeeMachine1.brewCoffee(1);
+    coffeeMachine1.refillWater(0.5);
+    coffeeMachine1.selectCoffeeType(2);
+
+    thermostat1.adjustTemperature(25.0f);
+    thermostat1.switchMode("Heat");
+    thermostat2.sendEnergyUsageReport();
+
+    libraryAccount1.checkOutBooks(5);
+    libraryAccount1.payFines(20.0);
+    libraryAccount2.renewBooks();
+
+    bike1.adjustResistance(3);
+    bike1.trackDistanceAndSpeed();
+    bike2.monitorHeartRate();
+
+    cockpit1.navigateAirplane();
+    cockpit1.communicateWithATC("Ascending to 15000 feet.");
+    cockpit2.monitorSystems();
+
+    engine1.propelAirplane();
+    engine1.adjustThrust(110.0f);
+    engine2.startEngine();
+
+    wings1.provideLift();
+    wings1.controlTilt(15.0f);
+    wings2.adjustForManeuvering();
+
+    gear1.deploy();
+    gear1.retract();
+    gear2.activateBrakes();
+
+    cabin1.adjustTemperature(22.0f);
+    cabin1.controlPressure();
+    cabin2.monitorAirQuality();
+
+    airplane1.takeOff();
+    airplane1.land();
+    airplane2.navigate("New York");
+
+    // Display some values
+    std::cout << "Coffee machine current water level: " << coffeeMachine1.waterTankCapacityLiters << " liters" << std::endl;
+    std::cout << "Thermostat current temperature: " << thermostat1.currentRoomTemperature << " degrees Celsius" << std::endl;
+    std::cout << "Library account books checked out: " << libraryAccount1.booksCheckedOut << std::endl;
+    std::cout << "Exercise bike current speed: " << bike1.currentSpeedKmPerHour << " km/h" << std::endl;
+    std::cout << "Cockpit current altitude: " << cockpit1.navigationSystem.altitude << " feet" << std::endl;
+    std::cout << "Engine current RPM: " << engine1.currentRPM << std::endl;
+    std::cout << "Wings current wingspan: " << wings1.wingspanMeters << " meters" << std::endl;
+    std::cout << "Landing gear number of wheels: " << gear1.numberOfWheels << std::endl;
+    std::cout << "Cabin number of seats: " << cabin1.numberOfPassengerSeats << std::endl;
+    std::cout << "Airplane taking off with cockpit system type: " << airplane1.cockpit.autopilotSystemType << std::endl;
+
  
     std::cout << "good to go!" << std::endl;
 }
