@@ -95,6 +95,8 @@ struct CoffeeMachine
     float currentTemperatureCelsius = 90.0f;
     int daysBeforeServicing = 30;
 
+    CoffeeMachine();
+
     void brewCoffee(int coffeeTypeIndex);
     void refillWater(float waterAmountLiters);
     void selectCoffeeType(int coffeeTypeIndex);
@@ -107,6 +109,8 @@ struct SmartThermostat
     float energyConsumptionKWh = 3.5f;
     std::string mode = "Auto";
     bool isWifiConnected = true;
+
+    SmartThermostat();
 
     void adjustTemperature(float newTemperature);
     void switchMode(const std::string& newMode);
@@ -121,6 +125,8 @@ struct LibraryAccount
     std::string accountStatus = "active";
     int daysUntilReturnDue = 14;
 
+    LibraryAccount();
+
     void checkOutBooks(int numberOfBooks);
     void payFines(double amount);
     void renewBooks();
@@ -133,6 +139,8 @@ struct ExerciseBike
     int resistanceLevel = 1;
     int userHeartRate = 60;
     double caloriesBurned = 0.0;
+
+    ExerciseBike();
 
     void adjustResistance(int newResistanceLevel);
     void trackDistanceAndSpeed();
@@ -155,10 +163,14 @@ struct Cockpit
         std::string currentFlightPlan = "N/A";
         float altitude = 10000.0f;
 
+        NavigationSystem();
+
         void updateFlightPlan(const std::string& newFlightPlan);
         void changeAltitude(float newAltitude);
         void activateAutoPilot();
     };
+
+    Cockpit();
 
     void navigateAirplane();
     void communicateWithATC(const std::string& message);
@@ -185,10 +197,14 @@ struct Engine
         int thrustEfficiencyPercentage = 90;
         float fuelFlowRate = 0.0f;
 
+        ThrustControl();
+
         void increaseThrust(float amount);
         void activateAfterburner();
         void decreaseThrust(float amount);
     };
+
+    Engine();
 
     void propelAirplane();
     void adjustThrust(float newThrustLevel);
@@ -207,6 +223,8 @@ struct Wings
     std::string materialType = "Composite";
     double elasticityPercent = 5.0;
 
+    Wings();
+
     void provideLift();
     void controlTilt(float angle);
     void adjustForManeuvering();
@@ -219,6 +237,8 @@ struct LandingGear
     bool isRetractable = true;
     int brakeEffectiveness = 8;
     float shockAbsorptionLevel = 7.5f;
+
+    LandingGear();
 
     void deploy();
     void retract();
@@ -233,6 +253,8 @@ struct Cabin
     std::string onboardEntertainmentOptions = "Movies, Music";
     int airFiltrationSystemQuality = 9;
 
+    Cabin();
+
     void adjustTemperature(float newTemperature);
     void controlPressure();
     void monitorAirQuality();
@@ -246,12 +268,21 @@ struct Airplane
     LandingGear landingGear;
     Cabin cabin;
 
+    Airplane();
+
     void takeOff();
     void land();
     void navigate(const std::string& destination); 
 };
 
 // Implementations for CoffeeMachine
+CoffeeMachine::CoffeeMachine() : numberOfCoffeeTypes(10), waterTankCapacityLiters(1.5f), 
+                  coffeeBeansGrams(500), currentTemperatureCelsius(90.0f), 
+                  daysBeforeServicing(30)
+{
+    std::cout << "Constructing CoffeeMachine" << std::endl;
+}
+
 void CoffeeMachine::brewCoffee(int coffeeTypeIndex)
 {
     std::cout << "Brewing coffee type " << coffeeTypeIndex << std::endl;
@@ -269,6 +300,12 @@ void CoffeeMachine::selectCoffeeType(int coffeeTypeIndex)
 }
 
 // Implementations for SmartThermostat
+SmartThermostat::SmartThermostat() : currentRoomTemperature(20.0f), desiredTemperature(22.0f),
+                    energyConsumptionKWh(3.5f), mode("Auto"), isWifiConnected(true)
+{
+    std::cout << "Constructing SmartThermostat" << std::endl;
+}
+
 void SmartThermostat::adjustTemperature(float newTemperature)
 {
     desiredTemperature = newTemperature;
@@ -288,6 +325,13 @@ float SmartThermostat::sendEnergyUsageReport()
 }
 
 // Implementations for LibraryAccount
+LibraryAccount::LibraryAccount() : booksCheckedOut(3), totalBooksAllowed(10), 
+                   fineAmountDue(0.0), accountStatus("active"), 
+                   daysUntilReturnDue(14)
+{
+    std::cout << "Constructing LibraryAccount" << std::endl;
+}
+
 void LibraryAccount::checkOutBooks(int numberOfBooks)
 {
     booksCheckedOut += numberOfBooks;
@@ -306,6 +350,12 @@ void LibraryAccount::renewBooks()
 }
 
 // Implementations for ExerciseBike
+ExerciseBike::ExerciseBike() : currentSpeedKmPerHour(0.0f), totalDistanceKm(0.0f), 
+                 resistanceLevel(1), userHeartRate(60), caloriesBurned(0.0)
+{
+    std::cout << "Constructing ExerciseBike" << std::endl;
+}
+
 void ExerciseBike::adjustResistance(int newResistanceLevel)
 {
     resistanceLevel = newResistanceLevel;
@@ -324,6 +374,13 @@ int ExerciseBike::monitorHeartRate()
 }
 
 // Implementations for Cockpit
+Cockpit::Cockpit() : numberOfControlPanels(4), autopilotSystemType("Advanced"), 
+            visibilityThroughWindshield(true), numberOfSeats(2), 
+            amountOfEmergencyEquipment(5)
+{
+    std::cout << "Constructing Cockpit" << std::endl;
+}
+
 void Cockpit::navigateAirplane()
 {
     std::cout << "Navigating airplane" << std::endl;
@@ -366,6 +423,13 @@ void Cockpit::performDiagnosticOnSystem(Cockpit::NavigationSystem systemToCheck)
     }
 }
 
+Cockpit::NavigationSystem::NavigationSystem() : gpsLatitude(0.0f), gpsLongitude(0.0f), 
+                     hasAutoPilotCapability(true), currentFlightPlan("N/A"), 
+                     altitude(10000.0f)
+{
+    std::cout << "Constructing NavigationSystem" << std::endl;
+}
+
 void Cockpit::NavigationSystem::updateFlightPlan(const std::string& newFlightPlan)
 {
     currentFlightPlan = newFlightPlan;
@@ -385,6 +449,13 @@ void Cockpit::NavigationSystem::activateAutoPilot()
 }
 
 // Implementations for Engine
+Engine::Engine() : thrustPowerKiloNewtons(100.0f), fuelConsumptionPerHour(50.0f), 
+           engineType("Jet"), operatingTemperatureRange(150.0f), 
+           currentRPM(2000)
+{
+    std::cout << "Constructing Engine" << std::endl;
+}
+
 void Engine::propelAirplane() {
     std::cout << "Propelling airplane" << std::endl;
 }
@@ -412,6 +483,13 @@ void Engine::initiateEmergencyShutdown(Engine::ThrustControl emergencyControlSet
     std::cout << "Initiating emergency shutdown" << std::endl;
 }
 
+Engine::ThrustControl::ThrustControl() : maxThrustKiloNewtons(120.0f), currentThrustKiloNewtons(100.0f), 
+                  isAfterburnerActive(false), thrustEfficiencyPercentage(90), 
+                  fuelFlowRate(0.0f)
+{
+    std::cout << "Constructing ThrustControl" << std::endl;
+}
+
 void Engine::ThrustControl::increaseThrust(float amount)
 {
     currentThrustKiloNewtons += amount;
@@ -431,57 +509,95 @@ void Engine::ThrustControl::decreaseThrust(float amount)
 }
 
 // Implementations for Wings
-void Wings::provideLift() { //FIXME: Coding Standard
+Wings::Wings() : wingspanMeters(20.0f), fuelCapacityLiters(2000.0f), 
+          numberOfFlaps(4), materialType("Composite"), 
+          elasticityPercent(5.0)
+{
+    std::cout << "Constructing Wings" << std::endl;
+}
+
+void Wings::provideLift()
+{
     std::cout << "Wings providing lift with wingspan of " << wingspanMeters << " meters." << std::endl;
 }
 
-void Wings::controlTilt(float angle) { //FIXME: Coding Standard
+void Wings::controlTilt(float angle)
+{
     std::cout << "Tilting wings to " << angle << " degrees for better maneuverability." << std::endl;
 }
 
-void Wings::adjustForManeuvering() { //FIXME: Coding Standard
+void Wings::adjustForManeuvering()
+{
     std::cout << "Adjusting wing flaps and elasticity by " << elasticityPercent << "% for improved stability." << std::endl;
 }
 
 // Implementations for LandingGear
-void LandingGear::deploy() { //FIXME: Coding Standard
+LandingGear::LandingGear() : numberOfWheels(6), maximumWeightCapacity(10000.0f), 
+                isRetractable(true), brakeEffectiveness(8), 
+                shockAbsorptionLevel(7.5f)
+{
+    std::cout << "Constructing LandingGear" << std::endl;
+}
+
+void LandingGear::deploy()
+{
     std::cout << "Deploying " << numberOfWheels << " wheels of landing gear." << std::endl;
 }
 
-void LandingGear::retract() { //FIXME: Coding Standard
+void LandingGear::retract()
+{
     std::cout << "Retracting landing gear. Gear is " << (isRetractable ? "" : "not ") << "retractable." << std::endl;
 }
 
-void LandingGear::activateBrakes() { //FIXME: Coding Standard
+void LandingGear::activateBrakes()
+{
     std::cout << "Activating brakes with effectiveness level of " << brakeEffectiveness << " out of 10." << std::endl;
 }
 
 // Implementations for Cabin
-void Cabin::adjustTemperature(float newTemperature) { //FIXME: Coding Standard
+Cabin::Cabin() : numberOfPassengerSeats(150), availableLegroomInches(32.0f), 
+          numberOfRestrooms(2), onboardEntertainmentOptions("Movies, Music"), 
+          airFiltrationSystemQuality(9)
+{
+    std::cout << "Constructing Cabin" << std::endl;
+}
+
+void Cabin::adjustTemperature(float newTemperature)
+{
     std::cout << "Adjusting cabin temperature from " << availableLegroomInches << " inches legroom space to " << newTemperature << "°C." << std::endl;
 }
 
-void Cabin::controlPressure() { //FIXME: Coding Standard
+void Cabin::controlPressure()
+{
     std::cout << "Controlling cabin pressure for " << numberOfPassengerSeats << " seats." << std::endl;
 }
 
-void Cabin::monitorAirQuality() { //FIXME: Coding Standard
+void Cabin::monitorAirQuality()
+{
     std::cout << "Monitoring air quality. Filtration system quality: " << airFiltrationSystemQuality << "/10." << std::endl;
 }
 
 // Implementations for Airplane
-void Airplane::takeOff() { //FIXME: Coding Standard
+Airplane::Airplane()
+{
+    std::cout << "Constructing Airplane" << std::endl;
+}
+
+void Airplane::takeOff()
+{
     std::cout << "Airplane taking off. Cockpit and engines are ready." << std::endl;
     cockpit.navigateAirplane();
     engine.propelAirplane();
 }
 
-void Airplane::land() { //FIXME: Coding Standard
+void Airplane::land()
+{
     std::cout << "Airplane landing. Deploying landing gear." << std::endl;
     landingGear.deploy();
 }
 
-void Airplane::navigate(const std::string& destination) { //FIXME: Coding Standard
+void Airplane::navigate(const std::string& destination)
+{
     std::cout << "Airplane navigating to " << destination << ". Autopilot: " << cockpit.autopilotSystemType << "." << std::endl;
     cockpit.navigateAirplane();
 }
@@ -492,6 +608,71 @@ int main()
 {
     Example::main(); //do not delete this line
     //add your code here:
+
+    CoffeeMachine coffeeMachine1, coffeeMachine2;
+    SmartThermostat thermostat1, thermostat2;
+    LibraryAccount libraryAccount1, libraryAccount2;
+    ExerciseBike bike1, bike2;
+    Cockpit cockpit1, cockpit2;
+    Engine engine1, engine2;
+    Wings wings1, wings2;
+    LandingGear gear1, gear2;
+    Cabin cabin1, cabin2;
+    Airplane airplane1, airplane2;
+
+    // Call member functions
+    coffeeMachine1.brewCoffee(1);
+    coffeeMachine1.refillWater(0.5);
+    coffeeMachine1.selectCoffeeType(2);
+
+    thermostat1.adjustTemperature(25.0f);
+    thermostat1.switchMode("Heat");
+    thermostat2.sendEnergyUsageReport();
+
+    libraryAccount1.checkOutBooks(5);
+    libraryAccount1.payFines(20.0);
+    libraryAccount2.renewBooks();
+
+    bike1.adjustResistance(3);
+    bike1.trackDistanceAndSpeed();
+    bike2.monitorHeartRate();
+
+    cockpit1.navigateAirplane();
+    cockpit1.communicateWithATC("Ascending to 15000 feet.");
+    cockpit2.monitorSystems();
+
+    engine1.propelAirplane();
+    engine1.adjustThrust(110.0f);
+    engine2.startEngine();
+
+    wings1.provideLift();
+    wings1.controlTilt(15.0f);
+    wings2.adjustForManeuvering();
+
+    gear1.deploy();
+    gear1.retract();
+    gear2.activateBrakes();
+
+    cabin1.adjustTemperature(22.0f);
+    cabin1.controlPressure();
+    cabin2.monitorAirQuality();
+
+    airplane1.takeOff();
+    airplane1.land();
+    airplane2.navigate("New York");
+
+    // Display some values
+    std::cout << "Coffee machine current water level: " << coffeeMachine1.waterTankCapacityLiters << " liters" << std::endl;
+    std::cout << "Thermostat current temperature: " << thermostat1.currentRoomTemperature << " degrees Celsius" << std::endl;
+    std::cout << "Library account books checked out: " << libraryAccount1.booksCheckedOut << std::endl;
+    std::cout << "Exercise bike current speed: " << bike1.currentSpeedKmPerHour << " km/h" << std::endl;
+    std::cout << "Cockpit current altitude: " << cockpit1.navigationSystem.altitude << " feet" << std::endl;
+    std::cout << "Engine current RPM: " << engine1.currentRPM << std::endl;
+    std::cout << "Wings current wingspan: " << wings1.wingspanMeters << " meters" << std::endl;
+    std::cout << "Landing gear number of wheels: " << gear1.numberOfWheels << std::endl;
+    std::cout << "Cabin number of seats: " << cabin1.numberOfPassengerSeats << std::endl;
+    std::cout << "Airplane taking off with cockpit system type: " << airplane1.cockpit.autopilotSystemType << std::endl;
+
  
     std::cout << "good to go!" << std::endl;
 }
