@@ -117,6 +117,20 @@ struct CoffeeMachine
     {
         std::cout << "Selected coffee type " << coffeeTypeIndex << "\n";
     }
+
+    void performCleaningCycle()
+    {
+        while (currentTemperatureCelsius > 30.0f)
+        {
+            std::cout << "Cooling down for cleaning. Current temperature: " << currentTemperatureCelsius << "°C\n";
+            currentTemperatureCelsius -= 5.0f; // Cooling down
+            if (currentTemperatureCelsius <= 30.0f)
+            {
+                std::cout << "Temperature cool enough for cleaning.\n";
+                break;
+            }
+        }
+    }
 };
 
 struct SmartThermostat
@@ -150,6 +164,20 @@ struct SmartThermostat
         std::cout << "Sending energy usage report. Total consumption: " << energyConsumptionKWh << " kWh\n";
         return energyConsumptionKWh;
     }
+
+    void simulateDayPassing()
+    {
+        for (int day = 1; day <= 7; ++day)
+        {
+            currentRoomTemperature += 0.5f; // simulate temperature rise
+            std::cout << "Day " << day << ": Room temperature is now " << currentRoomTemperature << "°C\n";
+            if (currentRoomTemperature >= desiredTemperature)
+            {
+                std::cout << "Desired temperature reached or exceeded.\n";
+                break;
+            }
+        }
+    }
 };
 
 struct LibraryAccount
@@ -182,6 +210,22 @@ struct LibraryAccount
     {
         std::cout << "Books renewed. No fines due\n";
     }
+
+    void simulateBookCheckouts()
+    {
+        int days = 0;
+        while (booksCheckedOut < totalBooksAllowed)
+        {
+            ++booksCheckedOut;
+            ++days;
+            std::cout << "Checked out one more book, total: " << booksCheckedOut << "\n";
+            if (booksCheckedOut == totalBooksAllowed)
+            {
+                std::cout << "Reached max books allowed after " << days << " days.\n";
+                break;
+            }
+        }
+    }
 };
 
 struct ExerciseBike
@@ -212,6 +256,16 @@ struct ExerciseBike
     {
         std::cout << "Monitoring heart rate: " << userHeartRate << " BPM\n";
         return userHeartRate;
+    }
+
+    void simulateExerciseSession(int minutes)
+    {
+        for (int minute = 0; minute < minutes; ++minute)
+        {
+            currentSpeedKmPerHour += 1.0f; // increase speed
+            totalDistanceKm += currentSpeedKmPerHour / 60; // convert speed to distance per minute
+            std::cout << "Minute " << minute + 1 << ": Speed " << currentSpeedKmPerHour << " km/h, Total Distance: " << totalDistanceKm << " km\n";
+        }
     }
 };
 
@@ -253,6 +307,45 @@ struct Cockpit
             hasAutoPilotCapability = true;
             std::cout << "Autopilot activated\n";
         }
+
+        void autoCorrectCourse(float targetLatitude, float targetLongitude)
+        {
+            std::cout << "Starting auto-correction for course...\n";
+            // Define thresholds for corrections
+            const float threshold = 0.1f;
+            while (std::abs(gpsLatitude - targetLatitude) > threshold || std::abs(gpsLongitude - targetLongitude) > threshold)
+            {
+                // Correct latitude
+                if (gpsLatitude < targetLatitude)
+                {
+                    gpsLatitude += 0.05f;
+                }
+                else if (gpsLatitude > targetLatitude)
+                {
+                    gpsLatitude -= 0.05f;
+                }
+
+                // Correct longitude
+                if (gpsLongitude < targetLongitude)
+                {
+                    gpsLongitude += 0.05f;
+                }
+                else if (gpsLongitude > targetLongitude)
+                {
+                    gpsLongitude -= 0.05f;
+                }
+
+                // Report current coordinates
+                std::cout << "Correcting to Latitude: " << gpsLatitude << ", Longitude: " << gpsLongitude << "\n";
+
+                // Check if within thresholds to break the loop early
+                if (std::abs(gpsLatitude - targetLatitude) <= threshold && std::abs(gpsLongitude - targetLongitude) <= threshold) {
+                    std::cout << "Course corrected to within acceptable thresholds.\n";
+                    break;
+                }
+            }
+        }
+
     };
 
     Cockpit()
@@ -298,6 +391,21 @@ struct Cockpit
         }
     }
 
+    void simulateFlight(int hours)
+    {
+        for (int hour = 1; hour <= hours; ++hour)
+        {
+            navigationSystem.changeAltitude(navigationSystem.altitude + 500.0f);
+            std::cout << "Hour " << hour << ": Altitude adjusted to " << navigationSystem.altitude << " feet.\n";
+            if (navigationSystem.altitude >= 15000.0f)
+            {
+                std::cout << "Cruising altitude reached.\n";
+                break;
+            }
+        }
+    }
+
+
     NavigationSystem navigationSystem;
 };
 
@@ -330,6 +438,20 @@ struct Engine
     {
         std::cout << "Engine started\n";
     }
+
+    void simulateEngineWarmUp()
+    {
+        while (operatingTemperatureRange < 200.0f)
+        {
+            operatingTemperatureRange += 5.0f; // Warm up the engine
+            std::cout << "Warming up. Current operating temperature: " << operatingTemperatureRange << "°C\n";
+            if (operatingTemperatureRange >= 200.0f)
+            {
+                std::cout << "Optimal operating temperature reached.\n";
+                break;
+            }
+        }
+    }
 };
 
 
@@ -360,6 +482,18 @@ struct Wings
     {
         std::cout << "Adjusting wing flaps and elasticity by " << elasticityPercent << "% for improved stability\n";
     }
+
+    void adjustFlapsForTakeoff()
+    {
+        for (int position = 1; position <= numberOfFlaps; ++position)
+        {
+            std::cout << "Flap " << position << " adjusted for takeoff.\n";
+            if (position == numberOfFlaps) {
+                std::cout << "All flaps are set for takeoff.\n";
+                break;
+            }
+        }
+    }
 };
 
 struct LandingGear
@@ -389,6 +523,17 @@ struct LandingGear
     {
         std::cout << "Activating brakes with effectiveness level of " << brakeEffectiveness << " out of 10\n";
     }
+
+    void testLandingGearCycles()
+    {
+        int cycles = 3; // Number of test cycles
+        for (int cycle = 1; cycle <= cycles; ++cycle)
+        {
+            deploy();
+            retract();
+            std::cout << "Cycle " << cycle << " completed.\n";
+        }
+    }
 };
 
 struct Cabin
@@ -417,6 +562,21 @@ struct Cabin
     void monitorAirQuality()
     {
         std::cout << "Monitoring air quality. Filtration system quality: " << airFiltrationSystemQuality << "/10\n";
+    }
+
+    void simulatePassengerBoarding()
+    {
+        int passengersBoarded = 0;
+        while (passengersBoarded < numberOfPassengerSeats)
+        {
+            ++passengersBoarded;
+            std::cout << "Passenger " << passengersBoarded << " boarded.\n";
+            if (passengersBoarded == numberOfPassengerSeats)
+            {
+                std::cout << "All passengers are boarded.\n";
+                break;
+            }
+        }
     }
 };
 
@@ -451,6 +611,22 @@ struct Airplane
         std::cout << "Airplane navigating to " << destination << ". Autopilot: " << cockpit.autopilotSystemType << "\n";
         cockpit.navigateAirplane();
     }
+
+    void simulateFlightPreparation()
+    {
+        std::cout << "Starting flight preparation...\n";
+        int tasksCompleted = 0;
+        while (tasksCompleted < 5)
+        { // Assuming 5 tasks for preparation
+            ++tasksCompleted;
+            std::cout << "Task " << tasksCompleted << " completed.\n";
+            if (tasksCompleted == 5)
+            {
+                std::cout << "Flight preparation is complete. Ready for takeoff.\n";
+                break;
+            }
+        }
+    }
 };
 
 int main()
@@ -473,42 +649,53 @@ int main()
     coffeeMachine1.brewCoffee(1);
     coffeeMachine1.refillWater(0.5);
     coffeeMachine1.selectCoffeeType(2);
+    coffeeMachine1.performCleaningCycle();
 
     thermostat1.adjustTemperature(25.0f);
     thermostat1.switchMode("Heat");
     thermostat2.sendEnergyUsageReport();
+    thermostat2.simulateDayPassing();
 
     libraryAccount1.checkOutBooks(5);
     libraryAccount1.payFines(20.0);
     libraryAccount2.renewBooks();
+    libraryAccount2.simulateBookCheckouts();
 
     bike1.adjustResistance(3);
     bike1.trackDistanceAndSpeed();
     bike2.monitorHeartRate();
+    bike2.simulateExerciseSession(30);
 
     cockpit1.navigateAirplane();
     cockpit1.communicateWithATC("Ascending to 15000 feet.");
     cockpit2.monitorSystems();
+    cockpit2.simulateFlight(5);
 
     engine1.propelAirplane();
     engine1.adjustThrust(110.0f);
     engine2.startEngine();
+    engine2.simulateEngineWarmUp();
 
     wings1.provideLift();
     wings1.controlTilt(15.0f);
     wings2.adjustForManeuvering();
+    wings2.adjustFlapsForTakeoff();
 
     gear1.deploy();
     gear1.retract();
     gear2.activateBrakes();
+    gear2.testLandingGearCycles();
 
     cabin1.adjustTemperature(22.0f);
     cabin1.controlPressure();
     cabin2.monitorAirQuality();
+    cabin2.simulatePassengerBoarding();
 
     airplane1.takeOff();
     airplane1.land();
     airplane2.navigate("New York");
+    airplane2.simulateFlightPreparation();
+    airplane2.cockpit.navigationSystem.autoCorrectCourse(45.0f, 12.0f);
 
     // Display some values
     std::cout << "Coffee machine current water level: " << coffeeMachine1.waterTankCapacityLiters << " liters" << std::endl;
